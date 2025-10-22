@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chijioke - Profile Card</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <article class="profile-card" data-testid="test-profile-card">
+      <div class="card-content">
+        <figure class="avatar-container">
+          <img
+            src="https://ik.imagekit.io/kc5qrkeo2/avatar.JPG?updatedAt=1760825463297"
+            alt=""
+            class="display-pic"
+            data-testid="test-user-avatar"
+          />
+        </figure>
+        
+        <div class="profile-details">
+          <nav class="page-nav">
+          <ul>
+            <li class="navigation"><a 
+              class="home-page" href="index.html">Home</a></li>
+            <li class="navigation"><a
+               class="about-page" href="about.html">About</a></li>
+            <li class="navigation"><a 
+              class="contact-page" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+          <h1 class="user-name" data-testid="test-user-name">Nwokporo Chijioke Gideon</h1>
+          <p class="user-bio" data-testid="test-user-bio">
+            Front end/Software developer who is passionate about learning new things, problem solving and loves working with people.
+          </p>
+          <span>Time in miliseconds:</span>
+          <p class="user-time" data-testid="test-user-time"></p>
+
+          <hr>
+
+            <div class="info-section">
+            <section class="info-tab">
+              <h2 class="section-title">Hobbies</h2>
+              <ul class="info-list tags" data-testid="test-user-hobbies">
+                <li class="info-item">Reading</li>
+                <li class="info-item">Sports</li>
+                <li class="info-item">Coding</li>
+                <li class="info-item">Traveling</li>
+              </ul>
+            </section>
+
+            <section class="info-tab">
+              <h2 class="section-title">Dislikes</h2>
+              <ul
+                class="info-list tags dislikes"
+                data-testid="test-user-dislikes"
+              >
+                <li class="info-item">Unproductivity</li>
+                <li class="info-item">Laziness</li>
+              </ul>
+            </section>
+
+            <nav class="social-section" aria-label="Social media profiles">
+            <h2 class="section-title">Socials</h2>
+            <ul class="social-links" data-testid="test-user-social-links">
+              <li>
+                <a
+                  href="nwokporocjijiokegideon@gmail.com"
+                  class="social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Gideon X page"
+                  data-testid="test-user-social-website"
+                >
+                  <i class="fas fa-x"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Gideon0123"
+                  class="social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Gideon GitHub account"
+                  data-testid="test-user-social-github"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/nwokporo-chijioke-gideon/"
+                  class="social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Gideon LinkedIn profile"
+                  data-testid="test-user-social-linkedin"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <script src="script.js"></script>
+  </body>
+</html>

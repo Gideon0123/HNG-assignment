@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chijioke - Contact Card</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <article class="profile-card" data-testid="test-contact-page">
+      <div class="card-content"> 
+        
+        <div class="profile-details">
+          <nav class="page-nav">
+          <ul>
+            <li class="navigation"><a 
+              class="home-page" href="index.html">Home</a></li>
+            <li class="navigation"><a
+               class="about-page" href="about.html">About</a></li>
+            <li class="navigation"><a 
+              class="contact-page" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        
+      <main class="container">
+      <h3>Contact Us</h3>
+      <form id="contact" novalidate>
+        <!-- Name -->
+        <div>
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            data-testid="test-contact-name"
+            aria-describedby="error-name"
+          />
+          <p
+            id="error-name"
+            data-testid="test-contact-error-name"
+            class="error"
+          ></p>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            data-testid="test-contact-email"
+            aria-describedby="error-email"
+          />
+          <p
+            id="error-email"
+            data-testid="test-contact-error-email"
+            class="error"
+          ></p>
+        </div>
+
+        <!-- Subject -->
+        <div>
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            data-testid="test-contact-subject"
+            aria-describedby="error-subject"
+          />
+          <p
+            id="error-subject"
+            data-testid="test-contact-error-subject"
+            class="error"
+          ></p>
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            data-testid="test-contact-message"
+            aria-describedby="error-message"
+          ></textarea>
+          <p
+            id="error-message"
+            data-testid="test-contact-error-message"
+            class="error"
+          ></p>
+        </div>
+
+        <!-- Button -->
+        <button type="submit" data-testid="test-contact-submit">Submit</button>
+
+        <!-- Success -->
+        <p
+          id="success-msg"
+          data-testid="test-contact-success"
+          class="success"
+        ></p>
+      </form>
+    </main>
+
+    <script>
+      const form = document.getElementById("contact");
+      const successMsg = document.getElementById("success-msg");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const subject = form.subject.value.trim();
+        const message = form.message.value.trim();
+        let valid = true;
+
+        const errors = {
+          name: document.getElementById("error-name"),
+          email: document.getElementById("error-email"),
+          subject: document.getElementById("error-subject"),
+          message: document.getElementById("error-message"),
+        };
+
+        // Reset
+        Object.values(errors).forEach((err) => {
+          err.style.display = "none";
+          err.textContent = "";
+        });
+        successMsg.style.display = "none";
+
+        // Validation rules
+        if (!name) {
+          errors.name.textContent = "Full name is required.";
+          errors.name.style.display = "block";
+          valid = false;
+        }
+
+        const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+        if (!email || !emailPattern.test(email)) {
+          errors.email.textContent = "Please enter a valid email.";
+          errors.email.style.display = "block";
+          valid = false;
+        }
+
+        if (!subject) {
+          errors.subject.textContent = "Subject is required.";
+          errors.subject.style.display = "block";
+          valid = false;
+        }
+
+        if (!message || message.length < 10) {
+          errors.message.textContent =
+            "Message must be at least 10 characters.";
+          errors.message.style.display = "block";
+          valid = false;
+        }
+
+        // On success
+        if (valid) {
+          successMsg.textContent = "Your message has been sent successfully!";
+          successMsg.style.display = "block";
+          form.reset();
+        }
+      });
+    </script>
+      </div>
+    </article>
+  </body>
+</html>

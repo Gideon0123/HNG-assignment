@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* Media Query */
+@media (max-width: 620px) {
+  .card-content {
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .avatar-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .display-pic {
+    width: 100% !important;
+    height: 500px !important;
+    text-align: center;
+    object-fit: cover;
+  }
+
+  .user-name {
+  font-size: 30px;
+  text-align: center;
+  }
+
+  .info-sections {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .home-page, .about-page, .contact-page {
+    display: block;
+    width: 100% !important;
+  }
+}
+ 
+ /* body style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+  padding: 10px;
+  display: flex;
+}
+
+.profile-card {
+  background-color: #FF7A00;
+  overflow: hidden;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 40px;
+}
+.profile-card:hover {
+    background-color: rgba(12, 165, 48, 0.667);
+}
+
+.card-content {
+  display: flex;
+  padding: 50px;
+}
+
+.avatar-container {
+  flex: 0 0 11rem;
+  margin-right: 2rem;
+}
+.display-pic {
+  width: 100%;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.page-nav {
+  display: inline-block;
+  height: auto;
+  width: 100%;
+}
+.navigation {
+  display: inline;
+  font-weight: 700;
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+}
+.home-page {
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  padding: 10px;
+  color: #212121;
+}
+.home-page:hover,
+.home-page:focus {
+  background-color: #212121;
+  transform: translateY(-2px);
+  color: white;
+  font-size: 20px;
+}
+.about-page {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+  padding: 10px;
+  color: #212121;
+}
+.about-page:hover,
+.about-page:focus {
+  background-color: #212121;
+  transform: translateY(-2px);
+  color: white;
+  font-size: 20px;
+}
+.contact-page {
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  padding: 10px;
+  color: #212121;
+}
+.contact-page:hover,
+.contact-page:focus {
+  background-color: #212121;
+  transform: translateY(-2px);
+  color: white;
+  font-size: 20px;
+}
+
+h3 {
+  padding-top: 10px;
+}
+/* about page style */
+
+.details, .goals {
+  list-style: none;
+  padding: 5px ;
+}
+
+.profile-details {
+  flex: 1;
+}
+.user-name {
+  font-size: 40px;
+}
+.user-bio {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #212121;
+}
+
+span {
+  font-weight: 700;
+}
+
+.user-time {
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  display: inline-block;
+  font-size: 20px;
+  font-family: monospace;
+}
+
+.social-section {
+  margin-bottom: 0px;
+}
+
+hr {
+    width: 100%;
+    color: #212121;
+}
+
+.section-title {
+  font-size: 18px;
+  color: #212121;
+  font-weight: 600;
+}
+.social-links {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.social-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #2BA53F;
+  color: #212121;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 700;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: #212121;
+  transform: translateY(-2px);
+  color: white;
+}
+
+.info-tab {
+  margin: 10px 0px;
+}
+.info-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.info-item {
+  background-color: #F9F2E9;
+  color: #212121;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.tags.dislikes li {
+  background: #e5e7eb;
+  color: #212121;
+}
+
+/* contact page */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #2BA53F;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: #FF7A00;
+}
+
+button {
+  background-color: #69f60b;
+  color: #212121;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #2869eb;
+  color: #F9F2E9;
+}
+
+.error {
+  color: #212121;
+  font-size: 15px;
+  display: none;
+}
+
+.success {
+  color: #212121;
+  text-align: center;
+  margin-top: 15px;
+  display: none;
+}
